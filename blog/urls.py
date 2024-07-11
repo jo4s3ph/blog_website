@@ -8,5 +8,4 @@ urlpatterns = [
     path('comments', views.comment, name='comments'),
     path('categories', views.category, name='categories'),
     path('blogs/blogdetails/<int:id>', views.blogdetails, name='blogdetails'),
-    path('blogs/blogdetails/<int:id>', views.commentdetails, name='comments'),
 ]

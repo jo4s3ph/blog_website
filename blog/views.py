@@ -30,21 +30,12 @@ def blogdetails(request, id):
   return HttpResponse(template.render(context, request))
 
 
-def commentdetails(request, id):
-  mycomments = Comment.objects.get(postId=id)
-  template = loader.get_template('blogdetails.html')
-  context = {
-    'mycomments': mycomments,
-  }
-  return HttpResponse(template.render(context, request))
-
-
 
 def comment(request):
-    comments = Comment.objects.all().values()
+    comments = Comment.objects.select_related('postId').all()
     template = loader.get_template('comments.html')
     context = {
-    'comments': comments,
+        'comments': comments,
     }
     return HttpResponse(template.render(context, request))
 

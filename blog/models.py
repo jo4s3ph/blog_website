@@ -26,7 +26,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
-    postId = models.ForeignKey(to=Post, on_delete=models.CASCADE)
+    postId = models.ForeignKey(to=Post , on_delete=models.CASCADE)
     userId = models.ForeignKey(to=User, on_delete=models.CASCADE)
     content = models.CharField(max_length=255)
     date_posted = models.DateField(auto_now=True)

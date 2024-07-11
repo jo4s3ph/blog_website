@@ -12,7 +12,7 @@ admin.site.register(Post, PostAdmin)
 
 
 class CommentAdmin(admin.ModelAdmin):
-  list_display = ("content", "date_posted", "postId", "id")
+  list_display = ("content", "date_posted", "postId")
 admin.site.register(Comment, CommentAdmin)
 
 
