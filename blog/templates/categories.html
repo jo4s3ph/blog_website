@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+<p><a href="/">HOME</a></p>
+<h2>Categories List</h2>
+<ul>
+    {% for x in categories %}
+      <li><strong>#</strong> {{ x.name }}</li><br>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Comments{% endblock %}
+
+{% block content %}
+<p><a href="/">HOME</a></p>
+<h2>Comments List</h2>
+<ul>
+    {% for x in comments %}
+      <li><strong>Content:</strong> {{ x.content }}</li>
+      <lo><strong>Blog ID:</strong> {{ x.postId }}</li><br>
+        <lo><strong>Posted:</strong> {{ x.date_posted }}</li>
+        <br><br>
+
+
+    {% endfor %}
+</ul>
+{% endblock %}
